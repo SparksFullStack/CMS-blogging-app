@@ -6,6 +6,5 @@
 
     $connection = mysqli_connect(host, user, pass, db_name);
 
-    if ($connection) echo "WE LIT";
-    else echo "we lite";
+    if (!$connection) die("There was an issue connecting to the database");
 ?>
