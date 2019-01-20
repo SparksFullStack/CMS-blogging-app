@@ -1,6 +1,6 @@
 <?php
     $query = "
-        SELECT * FROM posts WHERE post_author='Charlie Sparks'
+        SELECT * FROM posts
     ";
 
     $dbreq = mysqli_query($connection, $query);
@@ -20,5 +20,5 @@
         <p><?php echo $row['post_content'] ?></p>
         <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
-        <hr>
+        <!-- <hr> -->
 <?php } ?>
