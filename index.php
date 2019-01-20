@@ -20,7 +20,6 @@
                 <!-- Blog Posts -->
                 <?php
                     include "./includes/post.php";
-                    include "./includes/post.php";
                 ?>
             </div>
 
