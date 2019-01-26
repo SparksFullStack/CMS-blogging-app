@@ -16,6 +16,7 @@
                         <div class="col-xs-6">
                             <form action="">
                                 <div class="form-group">
+                                <label for="cat_title">Add Category</label>
                                     <input class="form-control" type="text" name="cat_title" placeholder="Category name...">
                                 </div>
 
@@ -24,6 +25,23 @@
                                 </div>
                             </form>
                         
+                        </div>
+
+                        <div class="col-xs-6">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Category Title</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>asdf</td> 
+                                        <td>fdas</td>   
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
