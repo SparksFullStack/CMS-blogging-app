@@ -1,7 +1,7 @@
-<?php include "./includes/header.php"; ?>
+<?php include "./includes/admin_header.php"; ?>
    
    <div id="wrapper">
-        <?php include "./includes/navigation.php"; ?>
+        <?php include "./includes/admin_navigation.php"; ?>
 
         <div id="page-wrapper">
 
@@ -28,6 +28,14 @@
                         </div>
 
                         <div class="col-xs-6">
+
+                            <?php 
+                                $query = "
+                                    SELECT * FROM categories
+                                ";
+                                $categories_query = mysqli_query($connection, $query);
+                            ?>
+
                             <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
@@ -36,10 +44,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>asdf</td> 
-                                        <td>fdas</td>   
-                                    </tr>
+
+                                <?php
+                                    while ($row = mysqli_fetch_assoc($categories_query)){
+                                        $cat_title = $row['cat_title'];
+                                        $cat_id = $row['cat_id'];
+                                        echo "<tr>
+                                                <td>{$cat_id}</td> 
+                                                <td>{$cat_title}</td>   
+                                            </tr>";
+                                    }
+                                ?>
                                 </tbody>
                             </table>
                         </div>
@@ -51,4 +66,4 @@
         </div>
         <!-- /#page-wrapper -->
 
-    <?php include "./includes/footer.php"; ?>
+    <?php include "./includes/admin_footer.php"; ?>
